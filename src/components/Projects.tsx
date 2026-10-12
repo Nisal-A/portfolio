@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { academicProjects, projects } from '../data/projects';
+import { projects } from '../data/projects';
 import { projectStatusLabel } from '../lib/labels';
 import type { Project, ProjectStatus } from '../types';
 import { ProjectCard } from './ProjectCard';
 import { ProjectModal } from './ProjectModal';
-import { Reveal, Section } from './ui';
+import { Section } from './ui';
 
 type Filter = 'all' | ProjectStatus;
 
@@ -45,24 +45,6 @@ export function Projects() {
         ))}
       </div>
       {visible.length === 0 && <p className="muted">No projects with this status yet.</p>}
-
-      <Reveal className="academic-block">
-        <h3 className="subheading">Academic and practice projects</h3>
-        {academicProjects.length > 0 ? (
-          <div className="projects-grid">
-            {academicProjects.map((project, i) => (
-              <ProjectCard key={project.id} project={project} onOpen={setSelected} delay={i * 80} />
-            ))}
-          </div>
-        ) : (
-          <div className="card empty-state">
-            <p>
-              University assignments, database designs, system diagrams and smaller exercises will appear here.
-              Add entries to <code>src/data/projects.ts</code> (<code>academicProjects</code>) to publish them.
-            </p>
-          </div>
-        )}
-      </Reveal>
 
       <ProjectModal project={selected} onClose={() => setSelected(null)} />
     </Section>

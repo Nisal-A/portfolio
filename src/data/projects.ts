@@ -91,7 +91,3 @@ export const projects: Project[] = [
   },
 ];
 
-/** Academic and practice work (assignments, database designs, concepts). */
-export const academicProjects: Project[] = [
-
-];
