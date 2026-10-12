@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Nisal Abhishek: Portfolio
 
 A responsive personal portfolio built with React 19, TypeScript and plain CSS custom properties.
@@ -90,3 +91,7 @@ debugger and Google's Rich Results test.
 
 - There is no router, so there is no separate 404 page. Adding `react-router` would enable one.
 - The page is a single document. Each section is reached via an anchor link.
+=======
+# portfolio
+personal portfolio website for myself
+>>>>>>> 2646f9783316f8b46f7f0089d54de7c5952859f6
