@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Replace with your real domain once deployed:
+# Sitemap: https://REPLACE-WITH-YOUR-DOMAIN.example/sitemap.xml
