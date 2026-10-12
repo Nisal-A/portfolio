@@ -1,14 +1,19 @@
-import { LuGithub, LuLinkedin, LuMail } from 'react-icons/lu';
+import { LuGithub, LuLinkedin, LuMail, LuPhone } from 'react-icons/lu';
 import { profile, socialLinks } from '../data/profile';
 import type { SocialLink } from '../types';
 import { ContactForm } from './ContactForm';
 import { Placeholder, Reveal, Section } from './ui';
 
-const icons = { github: LuGithub, linkedin: LuLinkedin, email: LuMail } as const;
+const icons = { github: LuGithub, linkedin: LuLinkedin, email: LuMail, phone: LuPhone } as const;
 
 function ContactItem({ link }: { link: SocialLink }) {
   const Icon = icons[link.kind];
-  const href = link.kind === 'email' && link.url === null && profile.email ? `mailto:${profile.email}` : link.url;
+  const href =
+    link.kind === 'email' && link.url === null && profile.email
+      ? `mailto:${profile.email}`
+      : link.kind === 'phone' && link.url
+      ? `tel:${link.url.replace(/\s+/g, '')}`
+      : link.url;
   const display = link.kind === 'email' ? profile.email : link.url;
 
   return (
@@ -19,7 +24,11 @@ function ContactItem({ link }: { link: SocialLink }) {
       <div>
         <p className="contact-label">{link.label}</p>
         {href && display ? (
-          <a href={href} target={link.kind === 'email' ? undefined : '_blank'} rel={link.kind === 'email' ? undefined : 'noopener noreferrer'}>
+          <a
+            href={href}
+            target={link.kind === 'email' || link.kind === 'phone' ? undefined : '_blank'}
+            rel={link.kind === 'email' || link.kind === 'phone' ? undefined : 'noopener noreferrer'}
+          >
             {display.replace(/^mailto:/, '').replace(/^https?:\/\/(www\.)?/, '')}
           </a>
         ) : (

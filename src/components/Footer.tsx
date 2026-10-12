@@ -1,4 +1,4 @@
-import { LuGithub, LuLinkedin, LuMail } from 'react-icons/lu';
+import { LuGithub, LuLinkedin, LuMail, LuPhone } from 'react-icons/lu';
 import { profile, socialLinks } from '../data/profile';
 
 const navLinks = [
@@ -6,10 +6,11 @@ const navLinks = [
   { href: '#skills', label: 'Skills' },
   { href: '#projects', label: 'Projects' },
   { href: '#education', label: 'Education' },
+  { href: '#beyond', label: 'Experience' },
   { href: '#contact', label: 'Contact' },
 ];
 
-const icons = { github: LuGithub, linkedin: LuLinkedin, email: LuMail } as const;
+const icons = { github: LuGithub, linkedin: LuLinkedin, email: LuMail, phone: LuPhone } as const;
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -36,9 +37,18 @@ export function Footer() {
         <ul className="footer-social" aria-label="Social links">
           {verified.map((l) => {
             const Icon = icons[l.kind];
+            const href =
+              l.kind === 'phone' && l.url ? `tel:${l.url.replace(/\s+/g, '')}` : l.url ?? '#';
+            const isExternal = l.kind !== 'email' && l.kind !== 'phone';
+
             return (
               <li key={l.label}>
-                <a href={l.url ?? '#'} target="_blank" rel="noopener noreferrer" aria-label={l.label}>
+                <a
+                  href={href}
+                  target={isExternal ? '_blank' : undefined}
+                  rel={isExternal ? 'noopener noreferrer' : undefined}
+                  aria-label={l.label}
+                >
                   <Icon aria-hidden="true" />
                 </a>
               </li>

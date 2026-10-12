@@ -38,5 +38,5 @@ export type MaybeValue = string | null;
 export interface SocialLink {
   label: string;
   url: MaybeValue;
-  kind: 'github' | 'linkedin' | 'email';
+  kind: 'github' | 'linkedin' | 'email' | 'phone';
 }

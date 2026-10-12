@@ -8,8 +8,9 @@ import { Typewriter } from './Typewriter';
 
 const roles = [
   'an Information Systems undergraduate',
-  'an aspiring full-stack developer',
-  'a practical problem-solver',
+  'a Project Manager & Business Analyst',
+  'a Networking & Communication Specialist',
+  'a Full-Stack Developer',
 ];
 
 /** Staggers the entrance animation of each hero element. */

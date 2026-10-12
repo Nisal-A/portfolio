@@ -4,44 +4,46 @@ import type { SkillGroup } from '../types';
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: 'Frontend Development',
-    items: ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript', 'Tailwind CSS'],
+    title: 'Programming Languages',
+    items: ['Java', 'C#', 'PHP', 'TypeScript', 'Python', 'JavaScript'],
   },
   {
-    title: 'Backend Development',
-    items: ['PHP', 'Laravel'],
+    title: 'Frameworks & Web Development',
+    items: ['Laravel 11', 'React.js', 'Next.js', 'Inertia.js', 'Tailwind CSS', 'Node.js', 'Express.js', 'HTML5 / CSS3'],
   },
   {
-    title: 'Database Management',
-    items: ['MySQL', 'SQL', 'Database design', 'Entity Relationship Diagrams (ERDs)'],
+    title: 'Database & Data Analysis',
+    items: ['MySQL', 'PostgreSQL', 'Supabase', 'SQL', 'Power BI', 'Advanced Excel', 'Database Design (ERDs)'],
   },
   {
-    title: 'Development Tools',
-    items: ['Git', 'GitHub', 'Visual Studio Code', 'Antigravity IDE', 'Vite', 'npm', 'Composer'],
-  },
-  {
-    title: 'Information Systems',
+    title: 'Networking & Communication',
     items: [
-      'Systems analysis and design',
-      'Requirements analysis',
-      'Software development documentation',
-      'Business process modelling',
-      'Object-oriented analysis and design',
-      'Data Flow Diagrams (DFDs)',
+      'Computer Networks',
+      'Network Protocols (TCP/IP, UDP, HTTP/S)',
+      'Routing & Switching',
+      'Network Security & Firewalls',
+      'Data Communication',
+      'Client-Server Architecture',
     ],
+  },
+  {
+    title: 'Project Management & Business Analysis',
+    items: ['Requirements Analysis', 'Business Process Modelling', 'Process Mapping (UML, Visio)', 'Jira', 'Trello', 'Figma'],
+  },
+  {
+    title: 'DevOps, Cloud & Enterprise Systems',
+    items: ['Git', 'GitHub', 'AWS (CloudWatch)', 'Enterprise Systems (CMS, RMS, SADAS, Finacle)', 'VS Code'],
   },
 ];
 
 /** Shown in the hero as small technology labels. */
-export const heroTechLabels = ['React', 'Laravel', 'PHP', 'MySQL', 'Git'];
+export const heroTechLabels = ['Laravel 11', 'React', 'TypeScript', 'MySQL', 'Next.js', 'Networking'];
 
 export const learningTopics: string[] = [
-  'Full-stack application development',
-  'Laravel authentication and authorization',
-  'Database architecture and optimization',
-  'RESTful APIs and application integration',
-  'Software architecture and maintainable code',
-  'Git workflows and collaborative development',
-  'UI/UX design and responsive interfaces',
-  'Secure business application development',
+  'Advanced Full-Stack Architectures (Laravel 11 & Next.js App Router)',
+  'Computer Networking & Network Infrastructure Protocols',
+  'Business Process Management (BPM) & Systems Optimization',
+  'Data Analytics & Intelligence with Power BI and SQL',
+  'Cloud Monitoring & Observability with AWS CloudWatch',
+  'Agile Project Management, Cross-Functional Leadership & Sprint Delivery',
 ];

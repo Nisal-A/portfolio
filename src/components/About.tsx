@@ -1,12 +1,12 @@
-import { LuCode, LuDatabase, LuWorkflow, LuUsers } from 'react-icons/lu';
+import { LuCode, LuDatabase, LuWorkflow, LuNetwork } from 'react-icons/lu';
 import { aboutParagraphs } from '../data/profile';
 import { Reveal, Section } from './ui';
 
 const focusAreas = [
-  { icon: LuCode, title: 'Application development', text: 'Building web applications with React, Laravel and TypeScript.' },
-  { icon: LuDatabase, title: 'Database design', text: 'Structuring data with ERDs, normalisation and MySQL.' },
-  { icon: LuWorkflow, title: 'Workflow automation', text: 'Turning manual business processes into clear digital steps.' },
-  { icon: LuUsers, title: 'Business processes', text: 'Modelling how organisations work so systems fit real needs.' },
+  { icon: LuCode, title: 'Full-Stack Development', text: 'Building performant web applications with Laravel 11, React, Next.js, and TypeScript.' },
+  { icon: LuNetwork, title: 'Networking & Communication', text: 'Designing robust network architectures, understanding communication protocols (TCP/IP), and managing data transmission.' },
+  { icon: LuWorkflow, title: 'Project Management & BA', text: 'Translating business requirements into clear architectures, UML workflows, and Jira sprints.' },
+  { icon: LuDatabase, title: 'Databases & Analytics', text: 'Designing relational databases (MySQL, PostgreSQL) and interactive Power BI dashboards.' },
 ];
 
 export function About() {
